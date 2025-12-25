@@ -614,6 +614,47 @@ body {
     z-index: 0;
 }
 
+.modern-counter-wrapper {
+    /* จัดตำแหน่งให้อยู่ด้านล่าง กึ่งกลาง */
+    display: flex;
+    justify-content: center;
+    margin-top: 40px; /* ระยะห่างจากเครดิตด้านบน */
+    margin-bottom: 20px; /* ระยะห่างจากขอบล่างสุด */
+}
+
+.glass-counter {
+    /* ✨ หัวใจสำคัญของดีไซน์ Glassmorphism ✨ */
+    background: rgba(255, 255, 255, 0.15); /* สีขาวโปร่งใส */
+    backdrop-filter: blur(10px); /* เอฟเฟกต์เบลอฉากหลัง */
+    -webkit-backdrop-filter: blur(10px); /* สำหรับ Safari */
+    border-radius: 20px; /* ขอบมนๆ น่ารัก */
+    border: 1px solid rgba(255, 255, 255, 0.25); /* เส้นขอบขาวบางๆ ให้ดูมีมิติ */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* เงาฟุ้งๆ ให้ดูลอยออกมา */
+
+    /* จัดเรียงเนื้อหาข้างใน */
+    display: flex;
+    align-items: center;
+    gap: 10px; /* ระยะห่างระหว่างข้อความกับตัวเลข */
+    padding: 8px 18px; /* พื้นที่ด้านใน */
+}
+
+.counter-label {
+    color: white;
+    font-family: 'Mali', cursive; /* ใช้ฟอนต์เดียวกับเว็บ */
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2); /* เงาข้อความเล็กน้อย */
+}
+
+/* ปรับแต่งตัวรูปภาพ Counter */
+.glass-counter img {
+    height: 22px; /* กำหนดความสูงให้พอดี */
+    width: auto;  /* ความกว้างปรับอัตโนมัติ */
+    filter: drop-shadow(0 1px 2px rgba(0,0,0,0.3)); /* เพิ่มเงาให้ตัวเลขดูลอยเด่นขึ้นมา */
+    vertical-align: middle;
+}
+
 /* =========================================
    KEYFRAME ANIMATIONS
    ========================================= */
