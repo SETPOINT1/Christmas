@@ -730,12 +730,43 @@ body {
    RESPONSIVE (Mobile)
    ========================================= */
 @media (max-width: 480px) {
-    .text-card { width: 85%; padding: 30px 15px; }
-    .main-title { font-size: 1.8rem; }
-    .year-text { font-size: 2.8rem; }
-    .greeting-body { font-size: 0.9rem; }
+    /* 1. ปรับขนาดการ์ดข้อความ */
+    .text-card { 
+        width: 90%; 
+        padding: 25px 15px; 
+    }
+    .main-title { font-size: 1.6rem; }
+    .year-text { font-size: 2.2rem; margin: 5px 0 10px 0; }
+    .greeting-body { font-size: 0.85rem; line-height: 1.4; }
     
-    /* ย่อขนาดของตกแต่งในมือถือ */
-    .snowman-wrapper { transform: scale(0.8); right: 5%; bottom: 10px; }
-    .tree-wrapper { transform: scale(0.8); left: -10px; bottom: 20px; }
+    /* 2. ย่อ Snowman ลง + ดันไปขวาสุดๆ */
+    .snowman-wrapper { 
+        transform: scale(0.6); /* ย่อเหลือ 60% */
+        right: -30px; /* ดันออกไปทางขวาให้พ้นทาง */
+        bottom: 5px; /* ให้ยืนต่ำลงมาหน่อย */
+    }
+
+    /* 3. ย่อต้นไม้ลง + ดันไปซ้ายสุดๆ */
+    .tree-wrapper { 
+        transform: scale(0.6); /* ย่อเหลือ 60% */
+        left: -30px; /* ดันออกไปทางซ้ายให้พ้นทาง */
+        bottom: 15px;
+    }
+
+    /* 4. ปรับตำแหน่ง Counter และ Credit ไม่ให้โดนบัง */
+    .modern-counter-wrapper {
+        margin-top: 10px;
+        margin-bottom: 80px; /* ดันพื้นที่ด้านล่างขึ้นมาหนีตัวการ์ตูน */
+        transform: scale(0.85); /* ย่อแถบ Counter ลงนิดนึงจะได้ไม่ล้น */
+    }
+
+    .credit {
+        font-size: 0.7rem;
+        margin-bottom: 5px;
+    }
+    
+    .final-msg {
+        font-size: 1rem;
+        margin-top: 15px;
+    }
 }
